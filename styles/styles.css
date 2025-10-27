@@ -362,43 +362,119 @@ nav a:focus::after {
 }
 
 /* ---------- Skills page ---------- */
-.skills {
-  margin: 40px auto;
-  max-width: 900px;
-  display: grid;
-  gap: 16px;
+/* === Global Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.skill {
-  display: grid;
-  gap: 8px;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fc;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
 }
 
-.skill span { font-weight: 600; color: #e6fbfa; font-size: 0.95rem; }
-
-/* progress bar wrapper */
-.bar {
-  background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  border-radius: 10px;
-  padding: 4px;
-  border: 1px solid rgba(255,255,255,0.03);
+/* === Header === */
+header {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-/* progress level (width controlled inline in HTML or via JS) */
-/* Transition for smooth fill */
-.level {
-  height: 14px;
-  border-radius: 8px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  width: 0; /* animated from inline style width or via JS */
-  transition: width 900ms var(--ease);
-  box-shadow: 0 6px 18px rgba(0,183,255,0.08) inset;
+header h1 {
+  font-size: 2rem;
+  color: #1e293b;
 }
 
-/* on hover, slightly brighten */
-.skill:hover .level {
-  filter: brightness(1.1);
+header p {
+  color: #475569;
+  margin-top: 8px;
 }
+
+/* === Skills Section === */
+.skills-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.skills-section h2 {
+  border-bottom: 2px solid #3b82f6;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  color: #1e3a8a;
+}
+
+/* === Technical Skills Table === */
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.skills-table th, .skills-table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.skills-table th {
+  background-color: #e0f2fe;
+}
+
+progress {
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+}
+
+/* === Soft Skills === */
+.soft-skills-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.soft-skills-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.soft-skills-list span {
+  color: #2563eb;
+  font-weight: 500;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .skills-table th, .skills-table td {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .skills-section {
+    padding: 15px;
+  }
+}
+
 
 /* ---------- Achievements page ---------- */
 .achievements {
@@ -457,3 +533,4 @@ footer {
   min-height: 180px;
   color: #bcdbe1;
 }
+/*
